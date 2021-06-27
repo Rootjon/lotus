@@ -26,7 +26,8 @@ from django.views.static import serve as mediaserve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('myapp.urls',namespace='myapp'))
+    path('',include('myapp.urls',namespace='myapp')),
+    path('album/',include('album.urls',namespace='album')),
 ]
 
 urlpatterns.append(url(f'^{settings.MEDIA_URL.lstrip("/")}(?P<path>.*)$',

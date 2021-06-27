@@ -42,6 +42,9 @@ INSTALLED_APPS = [
 
     #my app
     'myapp',
+    'cloudinary_storage',
+    'cloudinary',
+
 ]
 
 MIDDLEWARE = [
@@ -129,6 +132,15 @@ STATIC_ROOT = BASE_DIR / 'static_root'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media/'
+
+# storages
+CLOUDINARY_STORAGE = {
+    'CLOUD_NAME': 'secp',
+    'API_KEY': '393895353783933',
+    'API_SECRET': 'y_3O_6mA-OhTbaKtmVAixg21fvc'
+}
+
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

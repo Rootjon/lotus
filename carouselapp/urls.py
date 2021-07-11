@@ -1,8 +1,8 @@
 from django.urls import path, include
 from .import views
 
-app_name = 'album'
+app_name = 'carouselapp'
 
 urlpatterns = [
-    path('',views.list,name='list')
+    path('',views.slider,name='slider')
 ]

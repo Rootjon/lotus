@@ -3,7 +3,7 @@ from .models import Album
 
 # Create your views here.
 
-def blog_list (request):
+def list (request):
     albums = Album.objects.all()
 
     context = {

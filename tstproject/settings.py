@@ -43,10 +43,16 @@ INSTALLED_APPS = [
     #my app
     'myapp',
     'album',
+    'blog',
+    'carouselapp',
+    
     'cloudinary_storage',
     'cloudinary',
+    'taggit',
 
 ]
+
+INSTALLED_APPS += ('django_summernote', )
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -139,6 +145,7 @@ CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'secp',
     'API_KEY': '393895353783933',
     'API_SECRET': 'y_3O_6mA-OhTbaKtmVAixg21fvc'
+    
 }
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
@@ -149,4 +156,5 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
+X_FRAME__OPTIONS = 'SAMEORIGIN'
 django_heroku.settings(locals())

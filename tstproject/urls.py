@@ -26,8 +26,12 @@ from django.views.static import serve as mediaserve
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',include('myapp.urls',namespace='myapp')),
+    path('summernote/',include('django_summernote.urls')),
+    path('myapp/',include('myapp.urls',namespace='myapp')),
     path('album/',include('album.urls',namespace='album')),
+    path('',include('blog.urls',namespace='blog')),
+    path('carousel/',include('carouselapp.urls',namespace='carouselapp')),
+
 ]
 
 urlpatterns.append(url(f'^{settings.MEDIA_URL.lstrip("/")}(?P<path>.*)$',
